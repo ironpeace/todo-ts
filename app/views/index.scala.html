@@ -1,0 +1,22 @@
+@(message: String)
+
+@main("Todo.ts") {
+
+@helper.requireJs(core = routes.Assets.at("javascripts/require.js").url, module = routes.Assets.at("view/index").url)
+
+<br/>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1 class="panel-title">TODO.ts</h1>
+        </div>
+        <div class="panel-body">
+            <form>
+                <input id="contentIpt" class="form-control input-lg" type="text" placeholder="What needs to be done?">
+            </form>
+        </div>
+        <div id="tasksArea"></div>
+        <div id="alertArea" class="alert alert-success" role="alert"></div>
+</div>
+
+}
